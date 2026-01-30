@@ -1,0 +1,64 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: { typeName: 'Tax percentage maintain',
+                typeNamePlural: 'Tax percentage maintain',
+//                title: { type: #STANDARD, label: 'Tax percentage maintain'  } } }
+title:{ value: 'taxcode' }, description:{ value: 'Taxcode' } } }
+
+annotate entity ZC_FIT_TAX_PREC with
+{
+  @UI.facet: [{
+
+                  purpose: #HEADER,
+                 type: #DATAPOINT_REFERENCE,
+                 label: 'Tax percentage maintain',
+                 position: 10,
+                 targetQualifier: 'Taxcode'
+             }]
+
+  @UI: { lineItem:[{ position:   10 }],
+  identification: [{ position: 10 }],
+  selectionField: [{ position: 10 }] }
+  Taxcode;
+
+  @UI: { lineItem:[{ position: 20 }],
+  identification: [{ position: 20 }],
+  selectionField: [{ position: 20 }] }
+  IgstRate;
+
+  @UI: { lineItem:[{ position: 30 }],
+  identification: [{ position: 30 }],
+  selectionField: [{ position: 30 }] }
+  CgstRate;
+
+  @UI: { lineItem:[{ position: 40 }],
+  identification: [{ position: 40 }],
+  selectionField: [{ position: 40 }] }
+  SgstRate;
+
+  @UI: { lineItem:[{ position: 50 }],
+  identification: [{ position: 50 }],
+  selectionField: [{ position: 50 }] }
+  RcmIgstRate;
+
+  @UI: { lineItem:[{ position: 60 }],
+  identification: [{ position: 60 }] }
+  RcmCgstRate;
+
+  @UI: { lineItem:[{ position: 70 }],
+  identification: [{ position: 70 }] }
+  RcmSgstRate;
+
+  @UI.hidden: true
+  Localcreatedby;
+  @UI.hidden: true
+  Localcreatedat;
+  @UI.hidden: true
+  Locallastchangedby;
+  @UI.hidden: true
+  Locallastchangedat;
+  @UI.hidden: true
+  Lastchangedat;
+
+}
